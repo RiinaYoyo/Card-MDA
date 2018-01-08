@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 
 class Card extends Component {
   render() {
+
+
+
     return (
-      <div id="Card">
+      <div className="Card">
           <div>
-                <img src={this.props.src} />
+                <img className="imgProduit" src={this.props.src} />
           </div>
           <div> 
-                <h1>Un Produit</h1>
-                <h1>lol</h1>
-                <p>Une Description</p>
+                <h1 className="nomProduit" >{this.props.nomProduit}</h1>
+                <p className="descriProduit">{this.props.descriProduit}</p>
           </div>
-        
       </div>
     );
   }
