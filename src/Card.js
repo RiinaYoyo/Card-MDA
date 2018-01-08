@@ -9,6 +9,7 @@ class Card extends Component {
           </div>
           <div> 
                 <h1>Un Produit</h1>
+                <h1>lol</h1>
                 <p>Une Description</p>
           </div>
         
