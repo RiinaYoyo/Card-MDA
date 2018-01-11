@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 
 class Card extends Component {
     state={
-        display : "none",
+        visibility : "hidden",
     }
     showDesc = () =>{
         this.setState({
-            display : "block",
+            visibility : "visible",
         })
     }
     hideDesc = () =>{
         this.setState({
-            display : "none"
+            visibility : "hidden"
         })
     }
   render() {
@@ -19,13 +19,13 @@ class Card extends Component {
 
 
     return (
-      <div className="Card">
-          <div>
-                <img className="imgProduit" src={this.props.src} onMouseOver={this.showDesc} onMouseLeave={this.hideDesc} />
+      <div className="Card" onMouseOver={this.showDesc} onMouseLeave={this.hideDesc}>
+          <div className="div-Card-Image">
+                <img className="imgProduit" src={this.props.src}  />
           </div>
-          <div> 
+          <div className="descrip-produit-card"> 
                 <h1 className="nomProduit" >{this.props.nomProduit}</h1>
-                <p className="descriProduit" style={this.state}>{this.props.descriProduit}</p>
+                <p className="descriProduit" style={{visibility :this.state.visibility}}>{this.props.descriProduit}</p>
           </div>
       </div>
     );
