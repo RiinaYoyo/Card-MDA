@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 
 class Card extends Component {
     state={
-        visibility : "hidden",
+        marginTop: 150,
     }
     showDesc = () =>{
         this.setState({
-            visibility : "visible",
-        })
+            marginTop: 0,
+        },)
     }
     hideDesc = () =>{
         this.setState({
-            visibility : "hidden"
+            marginTop : 150,
         })
     }
   render() {
@@ -25,7 +25,7 @@ class Card extends Component {
           </div>
           <div className="descrip-produit-card"> 
                 <h1 className="nomProduit" >{this.props.nomProduit}</h1>
-                <p className="descriProduit" style={{visibility :this.state.visibility}}>{this.props.descriProduit}</p>
+                <p className="descriProduit" style={{marginTop :this.state.marginTop}}>{this.props.descriProduit}</p>
           </div>
       </div>
     );
