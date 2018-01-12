@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Card extends Component {
     state={
-        height: 70,
+        height: 85,
     }
     showDesc = () =>{
         this.setState({
@@ -11,7 +11,7 @@ class Card extends Component {
     }
     hideDesc = () =>{
         this.setState({
-            height : 70,
+            height : 85,
         })
     }
   render() {
