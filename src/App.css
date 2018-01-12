@@ -2,11 +2,11 @@
   text-align: center;
 }
 .Card{
-  height: 400px;
+  height: 100%;
 	margin: 20px;
 	width: 300px;
   border-radius: 5%;
-	background-color: orange;
+	background-color: #1f451a;
 }
 .imgProduit{
   border-radius: 5%;
@@ -36,5 +36,6 @@
   height: 219px;
 }
 .descrip-produit-card{
+  transition: linear 0.5s;
   overflow: hidden;
 }

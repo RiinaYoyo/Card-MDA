@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 
 class Card extends Component {
     state={
-        marginTop: 150,
+        height: 70,
     }
     showDesc = () =>{
         this.setState({
-            marginTop: 0,
+            height: 180,
         },)
     }
     hideDesc = () =>{
         this.setState({
-            marginTop : 150,
+            height : 70,
         })
     }
   render() {
@@ -21,11 +21,11 @@ class Card extends Component {
     return (
       <div className="Card" onMouseOver={this.showDesc} onMouseLeave={this.hideDesc}>
           <div className="div-Card-Image">
-                <img className="imgProduit" src={this.props.src}  />
+                <img className="imgProduit" src={this.props.src}/>
           </div>
-          <div className="descrip-produit-card"> 
+          <div className="descrip-produit-card" style={{height :this.state.height}}> 
                 <h1 className="nomProduit" >{this.props.nomProduit}</h1>
-                <p className="descriProduit" style={{marginTop :this.state.marginTop}}>{this.props.descriProduit}</p>
+                <p className="descriProduit" >{this.props.descriProduit}</p>
           </div>
       </div>
     );
