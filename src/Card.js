@@ -4,6 +4,9 @@ class Card extends Component {
     state={
         height: 85,
     }
+    componentWillMount(){
+        console.log(window.innerWidth);
+    }
     showDesc = () =>{
         this.setState({
             height: 180,
