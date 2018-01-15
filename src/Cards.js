@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import Card from './Card'
+import Produits from './DataProduit'
+
+console.log(Produits);
 class Cards extends Component {
+  state={
+    dataProduit: Produits,
+  }
   render() {
+    console.log(this.state.dataProduit);
     return (
-      <div className="div-cards">
-        <Card src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxM_UFEXGo9378mjct-OnUboJy3-rcl7vkOpPYvnsuJ39jKLWK" nomProduit="Tables post-cuites" descriProduit="Tables pour l'apéro 100% fabriqué à partir de déchets récupérés à Marie-Galante par notre équipe avec amour après de sales cuites" />
-        <Card src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxM_UFEXGo9378mjct-OnUboJy3-rcl7vkOpPYvnsuJ39jKLWK" nomProduit="Tables post-cuites" descriProduit="Tables pour l'apéro 100% fabriqué à partir de déchets récupérés à Marie-Galante par notre équipe avec amour après de sales cuites" />
-        <Card src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxM_UFEXGo9378mjct-OnUboJy3-rcl7vkOpPYvnsuJ39jKLWK" nomProduit="Tables post-cuites" descriProduit="Tables pour l'apéro 100% fabriqué à partir de déchets récupérés à Marie-Galante par notre équipe avec amour après de sales cuites" />
-        <Card src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxM_UFEXGo9378mjct-OnUboJy3-rcl7vkOpPYvnsuJ39jKLWK" nomProduit="Tables post-cuites" descriProduit="Tables pour l'apéro 100% fabriqué à partir de déchets récupérés à Marie-Galante par notre équipe avec amour après de sales cuites" />
+       <div className="div-cards">
+        {this.state.dataProduit.map((card, i)=> {
+        return(<Card src={card.src} nomProduit={card.nom} descriProduit={card.descr} />)
+        })}
+        
+           
       </div>
     );
   }
