@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Card from './Card'
-import Produits from './DataProduit'
+import Card from './Card';
+import CardMini from './Card-Mini';
+import Produits from './DataProduit';
 
 console.log(Produits);
 class Cards extends Component {
@@ -13,6 +14,9 @@ class Cards extends Component {
        <div className="div-cards">
         {this.state.dataProduit.map((card, i)=> {
         return(<Card src={card.src} nomProduit={card.nom} descriProduit={card.descr} />)
+        })}
+        {this.state.dataProduit.map((card, i)=> {
+        return(<CardMini src={card.src} nomProduit={card.nom} descriProduit={card.descr} />)
         })}
         
            
