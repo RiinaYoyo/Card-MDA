@@ -21,7 +21,7 @@ var Produits=[
     {
         src:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_ad_57h1fad9HSfNN_Pvuy9PlspIcTgtDzBxn81E6kEK6DgHa",
         alt:"Malle de récupération",
-        nom:"Malle de récupération",
+        nom:"Malle récupération",
         descr:"Coffre en bois fait artisanalement.",
     }
     
