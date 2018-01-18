@@ -8,13 +8,13 @@ class Cards extends Component {
   state={
     dataProduit: Produits,
   }
+  componentWillMount(){
+    console.log(window.innerWidth);
+  }
   render() {
     console.log(this.state.dataProduit);
     return (
        <div className="div-cards">
-        {this.state.dataProduit.map((card, i)=> {
-        return(<Card src={card.src} nomProduit={card.nom} descriProduit={card.descr} />)
-        })}
         {this.state.dataProduit.map((card, i)=> {
         return(<CardMini src={card.src} nomProduit={card.nom} descriProduit={card.descr} />)
         })}
